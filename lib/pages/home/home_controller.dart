@@ -7,6 +7,11 @@ class HomeController extends GetxController {
   void onInit() {
     super.onInit();
     webViewController.setJavaScriptMode(JavaScriptMode.unrestricted);
-    webViewController.loadRequest(Uri.parse('https://farmer.aquaconnect.blue'));
+    webViewController
+        .loadRequest(
+            Uri.parse('https://purple-flower-0e0798c00.4.azurestaticapps.net/'))
+        .then((value) async {
+      await webViewController.enableZoom(false);
+    });
   }
 }
